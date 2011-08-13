@@ -5,6 +5,7 @@ describe 'About Arrays', ->
     expect(typeOf(emptyArray)).toBe(FILL_ME_IN) # A mistake? - http://j.mp/oRuo6R
     expect(emptyArray.length).toBe(FILL_ME_IN);
 
+
   it 'should understand array literals', ->
     array = []
     expect(array).toEqual([])
@@ -18,6 +19,7 @@ describe 'About Arrays', ->
     array.push(3)
     expect(array).toEqual(FILL_ME_IN)
 
+
   it 'should understand array length', ->
     fourNumberArray = [1, 2, 3, 4]
 
@@ -30,6 +32,7 @@ describe 'About Arrays', ->
 
     tenEmptyElementArray.length = 5;
     expect(tenEmptyElementArray.length).toBe(FILL_ME_IN);
+
 
   it 'should understand multitype arrays', ->
     multiTypeArray = [0 # newlines substitute for commas in CoffeeScript
@@ -47,15 +50,13 @@ describe 'About Arrays', ->
     expect(multiTypeArray[4].value1).toBe(FILL_ME_IN)
     expect(multiTypeArray[5][0]).toBe(FILL_ME_IN)
 
+
   it 'should understand array ranges', ->
     range = [1..5]
     expect(range).toEqual(FILL_ME_IN)
 
-    oneToTen = [0..9]
-    expect(oneToTen[3..5]).toEqual(FILL_ME_IN) # and array slices
-
-    myString = "my string"[0..2]
-    expect(myString).toEqual(FILL_ME_IN)
+    sdrawkcab = [3..1]
+    expect(sdrawkcab).toEqual(FILL_ME_IN)
 
   it 'should understand array comprehension', ->
     array = [1, 2, 3]
@@ -65,12 +66,14 @@ describe 'About Arrays', ->
 
     expect(accumulator).toEqual(FILL_ME_IN)
 
+
   it 'should understand a more compact array comprehension', ->
     array = [1, 2, 3]
     accumulator = 1
     accumulator += element for element in array
 
     expect(accumulator).toEqual(FILL_ME_IN)
+
 
   it 'should slice arrays', ->
     array = ["peanut", "butter", "and", "jelly"]
@@ -82,6 +85,19 @@ describe 'About Arrays', ->
     expect(array.slice(3, 0)).toEqual(FILL_ME_IN)
     expect(array.slice(3, 100)).toEqual(FILL_ME_IN)
     expect(array.slice(5, 1)).toEqual(FILL_ME_IN)
+
+
+  it 'should understand range slicing', ->
+    oneToTen = [0..9]
+
+    expect(oneToTen[3..5]).toEqual(FILL_ME_IN)
+
+    myString = "my string"[0..2]
+    expect(myString).toEqual(FILL_ME_IN)
+
+    firstTwo = ['one', 'two', 'three']
+    expect(firstTwo[FILL_ME_IN]).toEqual(['one', 'two'])
+
 
   it 'should know array references', ->
     array = [ 'zero', 'one', 'two'
@@ -100,15 +116,17 @@ describe 'About Arrays', ->
     copyOfArray[3] = 'changed in copyOfArray'
     expect(array[3]).toBe(FILL_ME_IN)
 
+
   it 'should push and pop', ->
     array = [1, 2]
-    array.push 3
 
+    array.push 3
     expect(array).toEqual(FILL_ME_IN)
 
     poppedValue = array.pop
     expect(poppedValue).toBe(FILL_ME_IN)
     expect(array).toEqual(FILL_ME_IN)
+
 
   it 'should shift arrays', ->
     array = [1, 2]
