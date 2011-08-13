@@ -1,7 +1,6 @@
-var dojox; //globals
+### var dojox; //globals
 var df = dojox.lang.functional;
 
-###
 describe("About Applying What We Have Learnt", function() {
 
   var operations;
@@ -16,8 +15,6 @@ describe("About Applying What We Have Learnt", function() {
                    { direction: "RT", distance: 10}
                 ]
   });
-
-  /*********************************************************************************/
 
   it("should find a needle in a haystack (imperative)", function () {
 
@@ -40,7 +37,6 @@ describe("About Applying What We Have Learnt", function() {
     expect(df.some(operations, "x.direction === 'FWD' && x.distance > 100")).toBe(__);
   });
 
-  /*********************************************************************************/
 
   it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (imperative)", function () {
 
@@ -66,7 +62,6 @@ describe("About Applying What We Have Learnt", function() {
     expect(df.reduce(numbers, sumIfMultipleOf3Or5, 0)).toBe(__);
   });
 
-  /*********************************************************************************/
 
   it("should find the sum of all the even valued terms in the fibonacci sequence which do not exceed four million (imperative)", function () {
     var sum = 0;
@@ -101,9 +96,9 @@ describe("About Applying What We Have Learnt", function() {
     expect(sum).toBe(__);
   });
 
-  /*********************************************************************************/
-  /* UNCOMMENT FOR EXTRA CREDIT */
-  /*
+
+  # UNCOMMENT FOR EXTRA CREDIT
+
   it("should find the largest prime factor of a composite number", function () {
 
   });
@@ -124,6 +119,6 @@ describe("About Applying What We Have Learnt", function() {
   it("should find the 10001st prime", function () {
 
   });
-  */
+
 });
 ###
