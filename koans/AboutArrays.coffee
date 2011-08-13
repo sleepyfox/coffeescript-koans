@@ -2,7 +2,8 @@ describe 'About Arrays', ->
   it 'should create arrays', ->
   # We shall contemplate truth by testing reality, via spec expectations.
     emptyArray = []
-    expect(typeOf(emptyArray)).toBe(FILL_ME_IN) # A mistake? - http://j.mp/oRuo6R
+
+    expect(typeof emptyArray).toBe(FILL_ME_IN) # A mistake? - http://j.mp/oRuo6R
     expect(emptyArray.length).toBe(FILL_ME_IN);
 
 
@@ -88,8 +89,7 @@ describe 'About Arrays', ->
 
 
   it 'should understand range slicing', ->
-    oneToTen = [0..9]
-
+    oneToTen = [1..10]
     expect(oneToTen[3..5]).toEqual(FILL_ME_IN)
 
     myString = "my string"[0..2]
@@ -123,7 +123,7 @@ describe 'About Arrays', ->
     array.push 3
     expect(array).toEqual(FILL_ME_IN)
 
-    poppedValue = array.pop
+    poppedValue = array.pop()
     expect(poppedValue).toBe(FILL_ME_IN)
     expect(array).toEqual(FILL_ME_IN)
 
