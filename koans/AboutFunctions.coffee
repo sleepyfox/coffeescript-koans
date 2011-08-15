@@ -1,115 +1,74 @@
-### describe("About Functions", function() {
+describe 'About Functions', ->
+  it 'should declare functions', ->
+    # In Coffeescript, the value of the last expression is the return value of the function
+    add = (a, b) -> a + b
+    expect(add(1, 2)).toBe(FILL_ME_IN);
 
-  it("should declare functions", function() {
 
-    function add(a, b) {
-      return a + b;
-    }
+  it 'should know internal variables override outer variables', ->
+    message = 'Outer'
+    getMessage = -> message
+    overrideMessage = -> message = 'Inner'
 
-    expect(add(1, 2)).toBe(__);
-  });
+    expect(getMessage()).toBe(FILL_ME_IN)
+    expect(overrideMessage()).toBe(FILL_ME_IN)
+    expect(message).toBe(FILL_ME_IN)
 
-  it("should know internal wariables override outer variables", function () {
-    var message = "Outer";
 
-    function getMessage() {
-      return message;
-    }
+  it 'should have lexical scoping', ->
+    variable = 'top-level'
+    parentfunction = ->
+      variable = 'local'
+      childfunction = -> variable
 
-    function overrideMessage() {
-      var message = "Inner";
-      return message;
-    }
+    expect(parentfunction()()).toBe(FILL_ME_IN)
 
-    expect(getMessage()).toBe(__);
-    expect(overrideMessage()).toBe(__);
-    expect(message).toBe(__);
-  });
 
-  it("should have lexical scoping", function () {
-    var variable = "top-level";
-    function parentfunction() {
-        var variable = "local";
-      function childfunction() {
-          return variable;
-      }
-      return childfunction();
-    }
-    expect(parentfunction()).toBe(__);
-  });
+  it 'should use lexical scoping to synthesise functions', ->
+    makeIncreaseByFunction = (increaseByAmount) ->
+      (numberToIncrease) -> numberToIncrease + increaseByAmount
 
-  it("should use lexical scoping to synthesise functions", function () {
+    increaseBy3 = makeIncreaseByFunction 3
+    increaseBy5 = makeIncreaseByFunction 5
 
-    function makeIncreaseByFunction(increaseByAmount)
-    {
-      var increaseByFunction = function increaseBy(numberToIncrease)
-      {
-        return numberToIncrease + increaseByAmount;
-      };
-      return increaseByFunction;
-    }
+    expect(increaseBy3(10) + increaseBy5(10)).toBe(FILL_ME_IN)
 
-    var increaseBy3 = makeIncreaseByFunction(3);
-    var increaseBy5 = makeIncreaseByFunction(5);
 
-    expect(increaseBy3(10) + increaseBy5(10)).toBe(__);
-  });
+  it 'should allow extra function arguments', ->
+    returnFirstArg = (firstArg) -> firstArg
+    expect(returnFirstArg('first', 'second', 'third')).toBe(FILL_ME_IN)
 
-  it("should allow extra function arguments", function () {
+    returnSecondArg = (firstArg, secondArg) -> secondArg
+    expect(returnSecondArg('only give first arg')).toBe(FILL_ME_IN)
 
-    function returnFirstArg(firstArg)
-    {
-      return firstArg;
-    }
+    # Coffeescript supports splats
+    returnAllArgs = (allargs...) -> allargs
+    expect(returnAllArgs('first', 'second', 'third')).toBe(FILL_ME_IN)
 
-    expect(returnFirstArg("first", "second", "third")).toBe(__);
+    returnAllButFirst = (firstArg, rest...) -> rest
+    expect(returnAllButFirst('first', 'second', 'third')).toBe(FILL_ME_IN)
 
-    function returnSecondArg(firstArg, secondArg)
-    {
-      return secondArg;
-    }
 
-    expect(returnSecondArg("only give first arg")).toBe(__);
+  it 'should pass functions as values', ->
+    appendRules = (name) -> name + ' rules!'
+    appendDoubleRules = (name) -> name + ' totally rules!'
 
-    function returnAllArgs()
-    {
-      var argsArray = [];
-      for (var i = 0; i < arguments.length; i += 1) {
-        argsArray.push(arguments[i]);
-      }
-      return argsArray.join(",");
-    }
+    praiseSinger = givePraise: appendRules
+    expect(praiseSinger.givePraise 'John' ).toBe(FILL_ME_IN)
 
-    expect(returnAllArgs("first", "second", "third")).toBe(__);
-  });
+    praiseSinger.givePraise = appendDoubleRules
+    expect(praiseSinger.givePraise 'Mary' ).toBe(FILL_ME_IN)
 
-  it("should pass functions as values", function () {
 
-    var appendRules = function (name) {
-      return name + " rules!";
-    };
+  it 'should understand destructuring assignment', ->
+    weatherReport = (location) -> [location, 22, 'Mostly sunny']
+    [city, temperature, forecast] = weatherReport 'London'
+    expect(city).toBe(FILL_ME_IN)
+    expect(temperature).toBe(FILL_ME_IN)
 
-    var appendDoubleRules = function (name) {
-      return name + " totally rules!";
-    };
 
-    var praiseSinger = { givePraise: appendRules };
-    expect(praiseSinger.givePraise("John")).toBe(__);
-
-    praiseSinger.givePraise = appendDoubleRules;
-    expect(praiseSinger.givePraise("Mary")).toBe(__);
-
-  });
-
-  it("should use function body as a string", function () {
-    var add = new Function("a", "b", "return a + b;");
-    expect(add(1, 2)).toBe(__);
-
-    var multiply = function (a, b) {
-      //An internal comment
-      return a * b;
-    };
-    expect(multiply.toString()).toBe(__);
-  });
-});
-###
+  it 'should understand destructuring works with splats', ->
+    phrase = 'Now is the time for all good men to come to the aid of the Party'
+    [start, middle..., end] = phrase.split ' '
+    expect(start).toBe(FILL_ME_IN)
+    expect(end).toBe(FILL_ME_IN)

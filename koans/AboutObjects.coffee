@@ -1,109 +1,84 @@
-### describe("About Objects", function () {
+describe 'About Objects', ->
+  describe 'Properties', ->
+    beforeEach -> meglomaniac = mastermind: 'Joker', henchwoman: 'Harley'
 
-  describe("Properties", function () {
-    var meglomaniac;
+    it 'should confirm objects are collections of properties', ->
+      expect(meglomaniac.mastermind).toBe(FILL_ME_IN)
 
-    beforeEach(function () {
-       meglomaniac = {  mastermind: "Joker", henchwoman: "Harley" };
-    });
-
-    it("should confirm objects are collections of properties", function () {
-      expect(meglomaniac.mastermind).toBe(__);
-    });
-
-    it("should confirm that properties are case sensitive", function () {
-      expect(meglomaniac.henchwoman).toBe(__);
-      expect(meglomaniac.henchWoman).toBe(__);
-    });
-  });
+    it 'should confirm that properties are case sensitive', ->
+      expect(meglomaniac.henchwoman).toBe(FILL_ME_IN);
+      expect(meglomaniac.henchWoman).toBe(FILL_ME_IN);
 
 
-  it("should know properties that are functions act like methods", function () {
-    var meglomaniac = {
-      mastermind : "Brain",
-      henchman: "Pinky",
-      battleCry: function (noOfBrains) {
-        return "They are " + this.henchman + " and the" +
-          Array(noOfBrains + 1).join(" " + this.mastermind);
-      }
-    };
+  it 'should know properties that are functions act like methods', ->
+    # Coffeescript supports multi-line assignments and heredocs
+    meglomaniac =
+      mastermind: 'Brain',
+      henchman: 'Pinky',
+      battleCry: (noOfBrains) ->
+        'They are ' + @henchman + ' and the' +
+        Array(noOfBrains + 1).join(' ' + @mastermind) # In Coffeescript '@' = 'this'
 
-    battleCry = meglomaniac.battleCry(4);
-    expect(__).toMatch(battleCry);
-  });
+    battleCry = meglomaniac.battleCry 4
+    expect(FILL_ME_IN).toMatch(battleCry)
 
-  it("should confirm that when a function is attached to an object, 'this' refers to the object", function () {
-    var currentYear = 2010; // Update me!
-    var meglomaniac = {
-      mastermind: "James Wood",
-      henchman: "Adam West",
-      birthYear: 1970,
-      calculateAge: function () {
-        return currentYear - this.birthYear;
-      }
-    };
 
-    expect(currentYear).toBe(__);
-    expect(meglomaniac.calculateAge()).toBe(__);
-  });
+  it "should confirm that when a function is attached to an object, 'this' refers to the object", ->
+    currentYear = 2011; # Update me!
+    meglomaniac =
+      mastermind: 'James Wood'
+      henchman: 'Adam West'
+      birthYear: 1970
+      calculateAge: -> currentYear - @birthYear
 
-  describe("'in' keyword", function () {
-    var meglomaniac;
-    beforeEach(function () {
-      meglomaniac = {
-        mastermind: "The Monarch",
-        henchwoman: "Dr Girlfriend",
+    expect(currentYear).toBe(FILL_ME_IN);
+    expect(meglomaniac.calculateAge()).toBe(FILL_ME_IN);
+
+
+  describe "'in' keyword", ->
+    meglomaniac = {}
+    beforeEach ->
+      meglomaniac =
+        mastermind: 'The Monarch'
+        henchwoman: 'Dr Girlfriend'
         theBomb: true
-      };
-    });
 
-    it("should have the bomb", function () {
+    it 'should have the bomb', ->
+      hasBomb = 'theBomb' in meglomaniac
+      expect(hasBomb).toBe(FILL_ME_IN);
 
-      hasBomb = "theBomb" in meglomaniac;
-
-      expect(hasBomb).toBe(__);
-    });
-
-    it("should not have the detonator however", function () {
-
-      hasDetonator = "theDetonator" in meglomaniac;
-
-      expect(hasDetonator).toBe(__);
-    });
-  });
-
-  it("should know that properties can be added and deleted", function () {
-    var meglomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
-
-    expect("secretary" in meglomaniac).toBe(__);
-
-    meglomaniac.secretary = "Agent Smith";
-    expect("secretary" in meglomaniac).toBe(__);
-
-    delete meglomaniac.henchman;
-    expect("henchman" in meglomaniac).toBe(__);
-  });
+    it 'should not have the detonator however', ->
+      hasDetonator = 'theDetonator' in meglomaniac
+      expect(hasDetonator).toBe(FILL_ME_IN)
 
 
-  it("should use prototype to add to all objects", function () {
-      function Circle(radius)
-      {
-        this.radius = radius;
-      }
+  it 'should know that properties can be added and deleted', ->
+    meglomaniac =
+      mastermind : 'Agent Smith'
+      henchman: 'Agent Smith'
 
-      var simpleCircle = new Circle(10);
-      var colouredCircle = new Circle(5);
-      colouredCircle.colour = "red";
+    expect('secretary' in meglomaniac).toBe(FILL_ME_IN)
 
-      expect(simpleCircle.colour).toBe(__);
-      expect(colouredCircle.colour).toBe(__);
+    meglomaniac.secretary = 'Agent Smith'
+    expect('secretary' in meglomaniac).toBe(FILL_ME_IN)
 
-      Circle.prototype.describe = function () {
-        return "This circle has a radius of: " + this.radius;
-      };
+    delete meglomaniac.henchman
+    expect('henchman' in meglomaniac).toBe(FILL_ME_IN)
 
-      expect(simpleCircle.describe()).toBe(__);
-      expect(colouredCircle.describe()).toBe(__);
-  });
-});
-###
+
+  it 'should use prototype to add to all objects', ->
+      Circle = (radius) -> @radius = radius
+
+      simpleCircle = new Circle(10)
+      colouredCircle = new Circle(5)
+      colouredCircle.colour = 'red'
+
+      expect(simpleCircle.colour).toBe(FILL_ME_IN)
+      expect(colouredCircle.colour).toBe(FILL_ME_IN)
+
+      Circle.prototype.describe = -> 'This circle has a radius of: ' + @radius
+
+      expect(simpleCircle.describe()).toBe(FILL_ME_IN);
+      expect(colouredCircle.describe()).toBe(FILL_ME_IN);
+
+
