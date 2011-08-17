@@ -8,7 +8,7 @@ describe 'About Objects', ->
     it 'should confirm that properties are case sensitive', ->
       expect(meglomaniac.henchwoman).toBe(FILL_ME_IN);
       expect(meglomaniac.henchWoman).toBe(FILL_ME_IN);
-
+  # end Properties section
 
   it 'should know properties that are functions act like methods', ->
     # Coffeescript supports multi-line assignments and heredocs
@@ -44,26 +44,26 @@ describe 'About Objects', ->
         theBomb: true
 
     it 'should have the bomb', ->
-      hasBomb = 'theBomb' in meglomaniac
+      hasBomb = meglomaniac.theBomb? # ? is the existence operator
       expect(hasBomb).toBe(FILL_ME_IN);
 
     it 'should not have the detonator however', ->
-      hasDetonator = 'theDetonator' in meglomaniac
+      hasDetonator = meglomaniac.theDetonator?
       expect(hasDetonator).toBe(FILL_ME_IN)
-
+  # end 'in' keyword section
 
   it 'should know that properties can be added and deleted', ->
     meglomaniac =
       mastermind : 'Agent Smith'
       henchman: 'Agent Smith'
 
-    expect('secretary' in meglomaniac).toBe(FILL_ME_IN)
+    expect(meglomaniac.secretary?).toBe(FILL_ME_IN)
 
     meglomaniac.secretary = 'Agent Smith'
-    expect('secretary' in meglomaniac).toBe(FILL_ME_IN)
+    expect(meglomaniac.secretary?).toBe(FILL_ME_IN)
 
     delete meglomaniac.henchman
-    expect('henchman' in meglomaniac).toBe(FILL_ME_IN)
+    expect(meglomaniac.henchman?).toBe(FILL_ME_IN)
 
 
   it 'should use prototype to add to all objects', ->
