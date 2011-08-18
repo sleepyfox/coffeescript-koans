@@ -35,5 +35,5 @@ describe 'About inheritance', ->
     class DanishChef extends SwedishChef
       cook: -> 'Sizzle'
     redzepi = new DanishChef 30, 'foraging', 'happy'
-    (expect redzepi.cook().toBe(FILL_ME_IN)
+    (expect redzepi.cook()).toBe(FILL_ME_IN)
     (expect @swedishChef.cook()).toBe(FILL_ME_IN)
