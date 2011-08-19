@@ -55,7 +55,7 @@ describe 'About Applying What We Have Learnt', ->
       i+=1
 
     expect(sum).toBe(FILL_ME_IN)
-
+# 4613732
 
   it 'should find the sum of all the even valued terms in the fibonacci sequence which do not exceed four million (functional)', ->
   # generate array
