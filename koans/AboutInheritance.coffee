@@ -28,8 +28,8 @@ describe 'About inheritance', ->
   it 'should allow instances to override class methods', ->
     gonzo = new Muppet 3, 'daredevil performer'
     gonzo.answerNanny = -> 'Hehehe!'
-    (expect @gonzo.answerNanny()).toBe(FILL_ME_IN)
-    (expect muppet.answerNanny()).toBe(FILL_ME_IN)
+    (expect gonzo.answerNanny()).toBe(FILL_ME_IN)
+    (expect @muppet.answerNanny()).toBe(FILL_ME_IN)
 
   it 'should allow derived classes to override base classes', ->
     class DanishChef extends SwedishChef
