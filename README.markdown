@@ -18,47 +18,45 @@ you to solve more complicated problems and use more advanced techniques.
 ### Running the Koans from a Browser
 
 Simply navigate to the Javascript Koans folder using a file browser, and
-double click on KoansRunnner.html. 
-
-Any browser will do, but for the best results Firefox or Chrome is
+double click on KoansRunnner.html. Any browser will do, but for the best results Firefox or Chrome is
 recommended. More stack trace information shows up for Javascript on these
-browsers.
-
-The first error will be in koans/AboutExpects.coffee, fix the first test and
+browsers. The first error will be in koans/AboutExpects.coffee, fix the first test and
 refresh the browser. You'll need to edit the file, and then compile it using
 
-coffee -c AboutExpects.coffee 
+> coffee -c AboutExpects.coffee 
 
 I've included a Cake buildfile so from the top-level directory you can just type:
 
-cake build
+> cake build
 
 and it will build all of the .coffee files in the koans/ directory and compile 
 them to Javascript in the /lib/koans/ directory.
 
+If you want to keep the original files intact, you can copy them to the completed-koans/ 
+directory and use
+
+> cake test
+
+to compile them to lib/koans/
+
 There are a number of ways that you can have .coffee files automatically
 compiled to Javascript when you save them, take a look at:
-* [Your IDE e.g. IDEA](http://yeungda.github.com/coffeescript-idea/)
-* [Emacs coffee-mode](https://github.com/defunkt/coffee-mode) 
-* [Guard](https://github.com/netzpirat/guard-coffeescript)
-Rinse and repeat until all tests turn green.
 
-The test runner used is [Jasmine](http://pivotal.github.com/jasmine/) with a
-customized report viewer.
+*  [Your IDE e.g. IDEA](http://yeungda.github.com/coffeescript-idea/)
+*  [Emacs coffee-mode](https://github.com/defunkt/coffee-mode) 
+*  [Guard](https://github.com/netzpirat/guard-coffeescript)
+Rinse and repeat until all tests turn green.
 
 For this project I've used [Watchr](https://github.com/mynyml/watchr) - I've provided a koans.watchr file that 
 will automatically compile files as they are saved from the koans/ directory 
 to the lib/koans/ directory. 
 
-If you want to keep the original files intact, you can copy them to the completed-koans/ 
-directory and use
-
-cake test
-
-to compile them to lib/koans/
+The test runner used is [Jasmine](http://pivotal.github.com/jasmine/) with a
+customized report viewer.
 
 I've also included a simple AppleScript that will refresh the front browser window tab 
-if you are using a Mac and the Chrome browser. 
+if you are using a Mac and the Chrome browser, this is currently run automatically as part of  
+cake build or cake test
 
 ### Inspirations & thanks
 
