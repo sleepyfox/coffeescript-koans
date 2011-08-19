@@ -43,19 +43,26 @@ describe 'About Applying What We Have Learnt', ->
 
   it 'should find the sum of all the even valued terms in the fibonacci sequence which do not exceed four million (imperative)', ->
     sum = 0
-    fib = [0,1,1]
+    fib = [0, 1, 1]
     i = 3
     currentFib = 0
 
+    # Note, the condition in the while loop isn't strictly necessary, as the first fib
+    # >4m is actually odd, but it is good practice for avoiding fencepost errors
     while (currentFib = fib[i] = fib[i-1] + fib[i-2]) < 4000000
       if (currentFib % 2 == 0)
         sum += currentFib
       i+=1
 
     expect(sum).toBe(FILL_ME_IN)
-# 4613732
-###
+
+
   it 'should find the sum of all the even valued terms in the fibonacci sequence which do not exceed four million (functional)', ->
+  # generate array
+  fib = (lastFib = 1, secondToLastFib = 0) -> lastFib + SecondToLastFib
+  while fib = nextfib
+
+
     calcNextFibTuple = function(item, index, array) {
       return [item[1], item[0]+item[1]]
     }
@@ -70,9 +77,7 @@ describe 'About Applying What We Have Learnt', ->
 
     expect(sum).toBe(FILL_ME_IN)
 ###
-
-  # UNCOMMENT FOR EXTRA CREDIT
-###
+# UNCOMMENT FOR EXTRA CREDIT
   it 'should find the largest prime factor of a composite number', ->
 
   it 'should find the largest palindrome made from the product of two 3 digit numbers', ->
