@@ -23,11 +23,11 @@ recommended. More stack trace information shows up for Javascript on these
 browsers. The first error will be in koans/AboutExpects.coffee, fix the first test and
 refresh the browser. You'll need to edit the file, and then compile it using
 
-> coffee -c AboutExpects.coffee 
+    coffee -c AboutExpects.coffee 
 
 I've included a Cake buildfile so from the top-level directory you can just type:
 
-> cake build
+    cake build
 
 and it will build all of the .coffee files in the koans/ directory and compile 
 them to Javascript in the /lib/koans/ directory.
@@ -35,7 +35,7 @@ them to Javascript in the /lib/koans/ directory.
 If you want to keep the original files intact, you can copy them to the completed-koans/ 
 directory and use
 
-> cake test
+    cake test
 
 to compile them to lib/koans/
 
@@ -45,6 +45,7 @@ compiled to Javascript when you save them, take a look at:
 *  [Your IDE e.g. IDEA](http://yeungda.github.com/coffeescript-idea/)
 *  [Emacs coffee-mode](https://github.com/defunkt/coffee-mode) 
 *  [Guard](https://github.com/netzpirat/guard-coffeescript)
+
 Rinse and repeat until all tests turn green.
 
 For this project I've used [Watchr](https://github.com/mynyml/watchr) - I've provided a koans.watchr file that 
@@ -55,15 +56,24 @@ The test runner used is [Jasmine](http://pivotal.github.com/jasmine/) with a
 customized report viewer.
 
 I've also included a simple AppleScript (ChromeReloadr.sh) that will refresh the front browser window tab 
-if you are using a Mac and the Chrome browser, this is currently run automatically as part of  
-cake build or cake test
+if you are using a Mac and the Chrome browser, this is currently run automatically as part of 
+'cake build' or 'cake test'.
+
+You should use the following files dependant on which OS you are running on:
+
+* _Mac OS X:_ koans-mac.watchr
+* _Linux:_ koans-linux.watchr
+* _Windows:_ koans-win.watchr
+
+The Windows and Linux versions are currently the same as the Mac version only without the 
+Applescript.  
 
 ### Inspirations & thanks
 
-*  Ben Hall - for his Javascript/Jasmine port of the Ruby koans
-*  Jeremy Ashkenas and the Coffeescript crew on GitHub - for making Coffeescript
-*  Douglas Crockford - for Javascript; the good bits
-*  Edgecase - for the great Ruby Koans
+*  _Ben Hall_ - for his Javascript/Jasmine port of the Ruby koans
+*  _Jeremy Ashkenas and the Coffeescript crew on GitHub_ - for making Coffeescript
+*  _Douglas Crockford_ - for Javascript; the good bits
+*  _Edgecase_ - for the great Ruby Koans
 
 ##### License
 
