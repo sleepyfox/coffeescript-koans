@@ -54,7 +54,7 @@ to the lib/koans/ directory.
 The test runner used is [Jasmine](http://pivotal.github.com/jasmine/) with a
 customized report viewer.
 
-I've also included a simple AppleScript that will refresh the front browser window tab 
+I've also included a simple AppleScript (ChromeReloadr.sh) that will refresh the front browser window tab 
 if you are using a Mac and the Chrome browser, this is currently run automatically as part of  
 cake build or cake test
 
