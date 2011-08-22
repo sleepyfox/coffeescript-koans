@@ -21,8 +21,10 @@ describe 'About Applying What We Have Learnt', ->
 
 
   it 'should find needle in a haystack (functional)', ->
-    findNeedle = true for x in operations when x.direction is 'FWD' and x.distance > 100
-    (expect findNeedle?).toBe(FILL_ME_IN)
+    # FILL_ME_IN solution goes in here
+    # HINT: one way of doing this would be a 'for in when' construct using sum and
+    # filter functions, the existential operator is also useful
+    (expect FILL_ME_IN).toBe(FILL_ME_IN)
 
 
   it 'should add all the natural numbers below 1000 that are multiples of 3 or 5 (imperative)', ->
@@ -34,11 +36,10 @@ describe 'About Applying What We Have Learnt', ->
 
 
   it 'should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)', ->
-    total = 0
-    sum = (a) -> total = total + a
-
-    total = sum x for x in [1..1000] when x % 3 is 0 or x % 5 is 0
-    (expect total).toBe(FILL_ME_IN)
+    # FILL_ME_IN solution goes in here
+    # HINT: one way of doing this would be a 'for in when' construct using sum and
+    # filter functions
+    (expect FILL_ME_IN).toBe(234168)
 
 
   it 'should find the sum of all the even valued terms in the fibonacci sequence which do not exceed four million (imperative)', ->
@@ -55,27 +56,15 @@ describe 'About Applying What We Have Learnt', ->
       i+=1
 
     expect(sum).toBe(FILL_ME_IN)
-# 4613732
+
 
   it 'should find the sum of all the even valued terms in the fibonacci sequence which do not exceed four million (functional)', ->
-  # generate array
-  fib = (lastFib = 1, secondToLastFib = 0) -> lastFib + SecondToLastFib
-  while fib = nextfib
+    # FILL_ME_IN solution goes in here
+    # HINT: one way of doing this would be to construct an array of Fibonacci numbers
+    # using a function and a while loop, and then to filter it using an even function
+    expect(FILL_ME_IN).toBe(4613732)
 
 
-    calcNextFibTuple = function(item, index, array) {
-      return [item[1], item[0]+item[1]]
-    }
-    addEven = function(result, item) {
-      if (item[0]  % 2 === 0) {
-        return result + item[0]
-      }
-      return result
-    }
-    fib = df.until('item[0] > 4000000', calcNextFibTuple, [0,1])
-    sum = df.reduce(fib, addEven, 0)
-
-    expect(sum).toBe(FILL_ME_IN)
 ###
 # UNCOMMENT FOR EXTRA CREDIT
   it 'should find the largest prime factor of a composite number', ->
