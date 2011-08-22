@@ -12,7 +12,7 @@ describe 'About Applying What We Have Learnt', ->
     findNeedle = (ops) ->
       hasInvalidOperation = false
       for i in [0..ops.length]
-        if (ops[i].direction === 'FWD' && ops[i].distance > 100)
+        if (ops[i].direction == 'FWD' && ops[i].distance > 100)
           hasInvalidOperation = true
           break
       return hasInvalidOperation
@@ -24,7 +24,7 @@ describe 'About Applying What We Have Learnt', ->
     # FILL_ME_IN solution goes in here
     # HINT: one way of doing this would be a 'for in when' construct using sum and
     # filter functions, the existential operator is also useful
-    (expect FILL_ME_IN).toBe(FILL_ME_IN)
+    (expect findNeedle(operations)).toBe(FILL_ME_IN)
 
 
   it 'should add all the natural numbers below 1000 that are multiples of 3 or 5 (imperative)', ->
