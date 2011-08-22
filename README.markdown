@@ -23,11 +23,11 @@ recommended. More stack trace information shows up for Javascript on these
 browsers. The first error will be in koans/AboutExpects.coffee, fix the first test and
 refresh the browser. You'll need to edit the file, and then compile it using
 
-> coffee -c AboutExpects.coffee 
+    coffee -c AboutExpects.coffee 
 
 I've included a Cake buildfile so from the top-level directory you can just type:
 
-> cake build
+    cake build
 
 and it will build all of the .coffee files in the koans/ directory and compile 
 them to Javascript in the /lib/koans/ directory.
@@ -35,7 +35,7 @@ them to Javascript in the /lib/koans/ directory.
 If you want to keep the original files intact, you can copy them to the completed-koans/ 
 directory and use
 
-> cake test
+    cake test
 
 to compile them to lib/koans/
 
@@ -45,6 +45,7 @@ compiled to Javascript when you save them, take a look at:
 *  [Your IDE e.g. IDEA](http://yeungda.github.com/coffeescript-idea/)
 *  [Emacs coffee-mode](https://github.com/defunkt/coffee-mode) 
 *  [Guard](https://github.com/netzpirat/guard-coffeescript)
+
 Rinse and repeat until all tests turn green.
 
 For this project I've used [Watchr](https://github.com/mynyml/watchr) - I've provided a koans.watchr file that 
