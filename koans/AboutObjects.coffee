@@ -1,5 +1,6 @@
 describe 'About Objects', ->
   describe 'Properties', ->
+    meglomaniac = {}
     beforeEach -> meglomaniac = mastermind: 'Joker', henchwoman: 'Harley'
 
     it 'should confirm objects are collections of properties', ->
