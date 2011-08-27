@@ -43,10 +43,10 @@ describe 'About Functions', ->
 
     # Coffeescript supports splats
     returnAllArgs = (allargs...) -> allargs
-    expect(returnAllArgs('first', 'second', 'third')).toBe(FILL_ME_IN)
+    expect(returnAllArgs('first', 'second', 'third')).toEqual(FILL_ME_IN)
 
     returnAllButFirst = (firstArg, rest...) -> rest
-    expect(returnAllButFirst('first', 'second', 'third')).toBe(FILL_ME_IN)
+    expect(returnAllButFirst('first', 'second', 'third')).toEqual(FILL_ME_IN)
 
 
   it 'should pass functions as values', ->
