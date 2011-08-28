@@ -4,7 +4,7 @@ describe 'About Arrays', ->
     emptyArray = []
 
     expect(typeof emptyArray).toBe(FILL_ME_IN) # A mistake? - http://j.mp/oRuo6R
-    expect(emptyArray.length).toBe(FILL_ME_IN);
+    expect(emptyArray.length).toBe(FILL_ME_IN)
 
 
   it 'should understand array literals', ->
@@ -24,15 +24,15 @@ describe 'About Arrays', ->
   it 'should understand array length', ->
     fourNumberArray = [1, 2, 3, 4]
 
-    expect(fourNumberArray.length).toBe(FILL_ME_IN);
-    fourNumberArray.push(5, 6);
-    expect(fourNumberArray.length).toBe(FILL_ME_IN);
+    expect(fourNumberArray.length).toBe(FILL_ME_IN)
+    fourNumberArray.push(5, 6)
+    expect(fourNumberArray.length).toBe(FILL_ME_IN)
 
-    tenEmptyElementArray = new Array(10);
-    expect(tenEmptyElementArray.length).toBe(FILL_ME_IN);
+    tenEmptyElementArray = new Array(10)
+    expect(tenEmptyElementArray.length).toBe(FILL_ME_IN)
 
-    tenEmptyElementArray.length = 5;
-    expect(tenEmptyElementArray.length).toBe(FILL_ME_IN);
+    tenEmptyElementArray.length = 5
+    expect(tenEmptyElementArray.length).toBe(FILL_ME_IN)
 
 
   it 'should understand multitype arrays', ->
