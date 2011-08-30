@@ -5,14 +5,14 @@ describe 'About Higher Order Functions', ->
     tell = (num) -> if num > 0 then "#{num}, " else "Blastoff!"
     msg += tell i for i in numbers # 'for' gives an array comprehension
 
-    expect(msg).toEqual(FILL_ME_IN);
-    expect(numbers).toEqual(FILL_ME_IN);
+    expect(msg).toEqual(FILL_ME_IN)
+    expect(numbers).toEqual(FILL_ME_IN)
 
 
   it "should use 'in' to test inclusion", ->
     numbers = [1..3]
 
-    expect(if 2 in numbers then true else false).toBe();
+    expect(if 2 in numbers then true else false).toBe()
 
 
   it 'should use a Javascript-style filter to return array items that meet a criteria', ->
@@ -50,8 +50,8 @@ describe 'About Higher Order Functions', ->
     # simply place any function in front of 'for' for a map
     doubles = (twice x for x in numbers)
 
-    expect(numbers).toEqual(FILL_ME_IN);
-    expect(doubles).toEqual(FILL_ME_IN);
+    expect(numbers).toEqual(FILL_ME_IN)
+    expect(doubles).toEqual(FILL_ME_IN)
 
 
   it "should use Javascript-style 'reduce' to calculate a total over the array", ->
@@ -59,8 +59,8 @@ describe 'About Higher Order Functions', ->
     total = (i, a) -> i + a
     reduction = numbers.reduce total # Javascript style reduce
 
-    expect(reduction).toBe(FILL_ME_IN);
-    expect(numbers).toEqual(FILL_ME_IN);
+    expect(reduction).toBe(FILL_ME_IN)
+    expect(numbers).toEqual(FILL_ME_IN)
 
 
   it 'should use a Coffeescript-style reduce to calculate a total', ->

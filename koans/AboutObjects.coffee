@@ -7,8 +7,8 @@ describe 'About Objects', ->
       expect(meglomaniac.mastermind).toBe(FILL_ME_IN)
 
     it 'should confirm that properties are case sensitive', ->
-      expect(meglomaniac.henchwoman).toBe(FILL_ME_IN);
-      expect(meglomaniac.henchWoman).toBe(FILL_ME_IN);
+      expect(meglomaniac.henchwoman).toBe(FILL_ME_IN)
+      expect(meglomaniac.henchWoman).toBe(FILL_ME_IN)
   # end Properties section
 
   it 'should know properties that are functions act like methods', ->
@@ -25,15 +25,15 @@ describe 'About Objects', ->
 
 
   it "should confirm that when a function is attached to an object, 'this' refers to the object", ->
-    currentYear = 2011; # Update me!
+    currentYear = 2011 # Update me!
     meglomaniac =
       mastermind: 'James Wood'
       henchman: 'Adam West'
       birthYear: 1970
       calculateAge: -> currentYear - @birthYear
 
-    expect(currentYear).toBe(FILL_ME_IN);
-    expect(meglomaniac.calculateAge()).toBe(FILL_ME_IN);
+    expect(currentYear).toBe(FILL_ME_IN)
+    expect(meglomaniac.calculateAge()).toBe(FILL_ME_IN)
 
 
   describe "'in' keyword", ->
@@ -46,7 +46,7 @@ describe 'About Objects', ->
 
     it 'should have the bomb', ->
       hasBomb = meglomaniac.theBomb? # ? is the existence operator
-      expect(hasBomb).toBe(FILL_ME_IN);
+      expect(hasBomb).toBe(FILL_ME_IN)
 
     it 'should not have the detonator however', ->
       hasDetonator = meglomaniac.theDetonator?
@@ -79,7 +79,7 @@ describe 'About Objects', ->
 
       Circle.prototype.describe = -> 'This circle has a radius of: ' + @radius
 
-      expect(simpleCircle.describe()).toBe(FILL_ME_IN);
-      expect(colouredCircle.describe()).toBe(FILL_ME_IN);
+      expect(simpleCircle.describe()).toBe(FILL_ME_IN)
+      expect(colouredCircle.describe()).toBe(FILL_ME_IN)
 
 

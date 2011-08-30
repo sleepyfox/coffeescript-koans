@@ -2,7 +2,7 @@ describe 'About Functions', ->
   it 'should declare functions', ->
     # In Coffeescript, the value of the last expression is the return value of the function
     add = (a, b) -> a + b
-    expect(add(1, 2)).toBe(FILL_ME_IN);
+    expect(add(1, 2)).toBe(FILL_ME_IN)
 
 
   it 'should know internal variables override outer variables', ->
