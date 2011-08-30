@@ -28,7 +28,7 @@ describe 'About Applying What We Have Learnt', ->
 
 
   it 'should add all the natural numbers below 1000 that are multiples of 3 or 5 (imperative)', ->
-    total = 0;
+    total = 0
     for i in [1..1000]
       if (i % 3 == 0 || i % 5 == 0)
         total += i

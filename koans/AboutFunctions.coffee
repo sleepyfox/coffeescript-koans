@@ -2,7 +2,7 @@ describe 'About Functions', ->
   it 'should declare functions', ->
     # In Coffeescript, the value of the last expression is the return value of the function
     add = (a, b) -> a + b
-    expect(add(1, 2)).toBe(FILL_ME_IN);
+    expect(add(1, 2)).toBe(FILL_ME_IN)
 
 
   it 'should know internal variables override outer variables', ->
@@ -43,10 +43,10 @@ describe 'About Functions', ->
 
     # Coffeescript supports splats
     returnAllArgs = (allargs...) -> allargs
-    expect(returnAllArgs('first', 'second', 'third')).toBe(FILL_ME_IN)
+    expect(returnAllArgs('first', 'second', 'third')).toEqual(FILL_ME_IN)
 
     returnAllButFirst = (firstArg, rest...) -> rest
-    expect(returnAllButFirst('first', 'second', 'third')).toBe(FILL_ME_IN)
+    expect(returnAllButFirst('first', 'second', 'third')).toEqual(FILL_ME_IN)
 
 
   it 'should pass functions as values', ->

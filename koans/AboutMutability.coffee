@@ -35,6 +35,7 @@ describe 'About Mutability', ->
       @getFirstName = -> firstname
       @getLastName = -> lastname
       @getFullName = -> fullName
+      @
 
     aPerson = new Person 'John', 'Smith'
     aPerson.firstname = 'Penny'
