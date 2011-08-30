@@ -12,7 +12,7 @@ describe 'About Functions', ->
 
     expect(getMessage()).toBe(FILL_ME_IN)
     expect(overrideMessage()).toBe(FILL_ME_IN)
-    expect(message).toBe(FILL_ME_IN)
+    expect(message).toBe(FILL_ME_IN) # Side effect
 
 
   it 'should have lexical scoping', ->
