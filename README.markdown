@@ -70,10 +70,11 @@ Applescript.
 
 ### Inspirations & thanks
 
-*  _Ben Hall_ - for his Javascript/Jasmine port of the Ruby koans
+*  _David Laing & Greg Malcolm _ - for their Javascript/Jasmine port of the Ruby koans
+*  _Edgecase_ - for the great Ruby Koans
 *  _Jeremy Ashkenas and the Coffeescript crew on GitHub_ - for making Coffeescript
 *  _Douglas Crockford_ - for Javascript; the good bits
-*  _Edgecase_ - for the great Ruby Koans
+*  _Daniel P. Friedman & Matthias Felleisen_ - for 'The Little LISPer' book, where it all started
 
 ##### License
 
