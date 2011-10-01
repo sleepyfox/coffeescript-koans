@@ -15,6 +15,10 @@ These koans will be very simple, so don't overthink them! As you progress throug
 more koans, more and more CoffeeScript syntax will be introduced which will allow
 you to solve more complicated problems and use more advanced techniques.
 
+### Getting Started
+
+If you haven't already installed CoffeeScript then follow the installation instructions on the official [CoffeeScript site](http://jashkenas.github.com/coffee-script/#installation) to get set up.
+
 ### Running the Koans from a Browser
 
 Simply navigate to the Javascript Koans folder using a file browser, and
