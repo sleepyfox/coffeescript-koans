@@ -15,6 +15,10 @@ These koans will be very simple, so don't overthink them! As you progress throug
 more koans, more and more CoffeeScript syntax will be introduced which will allow
 you to solve more complicated problems and use more advanced techniques.
 
+### Getting Started
+
+If you haven't already installed CoffeeScript then follow the installation instructions on the official [CoffeeScript site](http://jashkenas.github.com/coffee-script/#installation) to get set up.
+
 ### Running the Koans from a Browser
 
 Simply navigate to the Javascript Koans folder using a file browser, and
@@ -70,10 +74,11 @@ Applescript.
 
 ### Inspirations & thanks
 
-*  _Ben Hall_ - for his Javascript/Jasmine port of the Ruby koans
+*  _David Laing & Greg Malcolm _ - for their Javascript/Jasmine port of the Ruby koans
+*  _Edgecase_ - for the great Ruby Koans
 *  _Jeremy Ashkenas and the Coffeescript crew on GitHub_ - for making Coffeescript
 *  _Douglas Crockford_ - for Javascript; the good bits
-*  _Edgecase_ - for the great Ruby Koans
+*  _Daniel P. Friedman & Matthias Felleisen_ - for 'The Little LISPer' book, where it all started
 
 ##### License
 
