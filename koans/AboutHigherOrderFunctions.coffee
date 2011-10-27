@@ -17,7 +17,7 @@ describe 'About Higher Order Functions', ->
 
   it 'should use a Javascript-style filter to return array items that meet a criteria', ->
     numbers = [1..6]
-    even = (a) -> if a % 2 == 0 then true else false
+    even = (a) -> if a % 2 == 0 then true else false # this can be shortened to 'even = (a) -> a % 2 == 0' when you are comfortable with it
     evens = numbers.filter even
 
     expect(evens).toEqual(FILL_ME_IN)
@@ -27,7 +27,7 @@ describe 'About Higher Order Functions', ->
 
   it 'should use a CoffeeScript-style filter', ->
     numbers = [1..6]
-    even = (a) -> if a % 2 == 0 then true else false
+    even = (a) -> a % 2 == 0 
     odds = (x for x in numbers when not even x) # filter an array comprehension with 'when'
 
     expect(odds).toEqual(FILL_ME_IN)
