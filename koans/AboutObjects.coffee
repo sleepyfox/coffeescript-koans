@@ -25,7 +25,7 @@ describe 'About Objects', ->
 
 
   it "should confirm that when a function is attached to an object, 'this' refers to the object", ->
-    currentYear = 2011 # Update me!
+    currentYear = (new Date).getFullYear()
     meglomaniac =
       mastermind: 'James Wood'
       henchman: 'Adam West'
