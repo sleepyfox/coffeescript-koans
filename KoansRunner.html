@@ -7,6 +7,7 @@
   <script type="text/javascript" src="lib/jasmine/jasmine.js"></script>
   <script type="text/javascript" src="lib/jasmine/jasmine-html.js"></script>
   <script type="text/javascript" src="lib/jasmine/coffeekoans-jasmine-html.js"></script>
+  <script type="text/javascript" src="http://js.pusherapp.com/1.10/pusher.js"></script>
   <script type="text/javascript" src="lib/FILL_ME_IN.js"></script>
 
   <script type="text/javascript" src="lib/koans/AboutExpects.js"></script>
@@ -23,6 +24,13 @@
 <script type="text/javascript">
   jasmine.getEnv().addReporter(new CoffeeKoansReporter());
   jasmine.getEnv().execute();
+  if(/Win/.test(navigator.platform)){
+    var pusher = new Pusher('a2024b659f492cab86cc');
+    pusher.subscribe('coffeescript-koan');
+    pusher.bind('refresh', function(data) {
+      location.reload(true);
+    });
+  }
 </script>
 
 </body>
