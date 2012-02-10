@@ -61,7 +61,7 @@ customized report viewer.
 
 I've also included a simple AppleScript (ChromeReloadr.sh) that will refresh the front browser window tab 
 if you are using a Mac and the Chrome browser, this is currently run automatically as part of 
-'cake build' or 'cake test'.
+'cake build' or 'cake test'. If you're using Windows, install [autorefresh](https://github.com/logankoester/autorefresh) gem for continuous testing.
 
 You should use the following files dependant on which OS you are running on:
 
