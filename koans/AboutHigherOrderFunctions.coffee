@@ -12,7 +12,7 @@ describe 'About Higher Order Functions', ->
   it "should use 'in' to test inclusion", ->
     numbers = [1..3]
 
-    expect(if 2 in numbers then true else false).toBe()
+    expect(if 2 in numbers then true else false).toBe(FILL_ME_IN)
 
 
   it 'should use a Javascript-style filter to return array items that meet a criteria', ->
