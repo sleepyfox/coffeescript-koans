@@ -11,7 +11,7 @@ describe 'About Applying What We Have Learnt', ->
   it 'should find a needle in a haystack (imperative)', ->
     findNeedle = (ops) ->
       hasInvalidOperation = false
-      for i in [0..ops.length]
+      for i in [0..ops.length-1]
         if (ops[i].direction == 'FWD' && ops[i].distance > 100)
           hasInvalidOperation = true
           break
