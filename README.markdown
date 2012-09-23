@@ -72,6 +72,11 @@ You should use the following files dependant on which OS you are running on:
 The Windows and Linux versions are currently the same as the Mac version only without the 
 Applescript.  
 
+### Endorse this project 
+To say 'thanks' please endorse this project on [Coderwall](http://coderwall.com) by clicking the button below:
+
+[![endorse](http://api.coderwall.com/sleepyfox/endorsecount.png)](http://coderwall.com/sleepyfox)
+
 ### Inspirations & thanks
 
 *  _David Laing & Greg Malcolm _ - for their Javascript/Jasmine port of the Ruby koans
