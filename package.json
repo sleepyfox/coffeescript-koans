@@ -4,7 +4,8 @@
   "description": "Koans for learning CoffeeScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers coffee:coffee-script/register -R spec completed-koans/*.coffee",
+    "watch": "mocha -w --compilers coffee:coffee-script/register -R spec completed-koans/*.coffee"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/sleepyfox/coffeescript-koans/issues"
   },
-  "homepage": "https://github.com/sleepyfox/coffeescript-koans"
+  "homepage": "https://github.com/sleepyfox/coffeescript-koans",
+  "devDependencies": {
+    "coffee-script": "~1.7.1",
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1"
+  }
 }

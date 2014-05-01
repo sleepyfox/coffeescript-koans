@@ -1,54 +1,75 @@
 # CoffeeScript Koans - koans to learn CoffeeScript #
 
 This work is based on Ben Hall's [Javascript Koans](https://github.com/BenHall/javascript-koans), which in turn are based upon Edgecase's [Ruby koans](http://github.com/edgecase/ruby_koans). 
-The goal of the Coffeescript koans is to teach you CoffeeScript programming through testing.
-I'll mercilessly plagarise the original documentation as follows:
+The goal of the CoffeeScript koans is to teach you CoffeeScript programming through actually doing it, in a test-first fashion. I'll mercilessly plagiarise the original documentation as follows:
 
-When you first run the koans, you'll be presented with a runtime error and a stack trace indicating where the error occurred. Your goal is to make the error go away. As you fix each error, you should learn something about the CoffeeScript language and functional programming in general.
+When you first run the Koans, you'll be presented with a runtime error and a stack trace indicating where the error occurred. Your goal is to make the error go away. As you fix each error, you should learn something about the CoffeeScript language and functional programming in general.
 
-Your journey towards CoffeeScript enlightenment starts in the koans/AboutExpects.coffee file. 
+Your journey towards CoffeeScript enlightenment starts in the Koans folder with the AboutExpects.coffee file. 
 
-These koans will be very simple, so don't overthink them! As you progress through more koans, more and more CoffeeScript syntax will be introduced which will allow you to solve more complicated problems and use more advanced techniques.
+These Koans will be very simple, so don't over-think them! As you progress through more Koans, more and more CoffeeScript syntax will be introduced which will allow you to solve more complicated problems and use more advanced techniques.
 
 ### Getting Started
 
-If you haven't already installed CoffeeScript then follow the installation instructions on the official [CoffeeScript site](http://jashkenas.github.com/coffee-script/#installation) to get set up.
+This project requires Node.js - if you haven't already installed it I would recommend installing the Node Version Manager (NVM) and using that to install Node - see more here.
+	
+Install dependencies with npm:
+	
+	npm install
 
 ### Running the Koans the command line
 
-Simply navigate to the Javascript Koans folder using a file browser, and double click on KoansRunnner.html. Any browser will do, but for the best results Firefox or Chrome is recommended. More stack trace information shows up for Javascript on these browsers. The first error will be in koans/AboutExpects.coffee, fix the first test and
-refresh the browser. You'll need to edit the file, and then compile it using
+Start with copying the file koans/AboutShould.coffee to the completed-koans/ folder. 
 
-    coffee -c AboutExpects.coffee 
+Run the tests with mocha:
 
-I've included a Cake buildfile so from the top-level directory you can just type:
+	npm test
 
-    cake build
+You should see the following output: 
 
-and it will build all of the .coffee files in the koans/ directory and compile 
-them to Javascript in the /lib/koans/ directory.
+	About Should
+	    1) should expect true
+	    - should have filled in values
+	    - should understand type coercion is fixed
+	    - should expect equality
+	    - should assert equality a better way
 
-If you want to keep the original files intact, you can copy them to the completed-koans/ 
-directory and use
+	0 passing (7ms) <- this is how long the tests took to run
+	4 pending
+	1 failing
 
-    cake test
+You'll see that one of the tests is failing, and that the other 4 have been temporarily disabled (marked as 'pending').  
 
-to compile them to lib/koans/
+Edit the AboutShould.coffee file (your copy in the completed-koans/ folder) with the editor or IDE of your choice and follow the directions to fix the problem in the first test.
 
-There are a number of ways that you can have .coffee files automatically
-compiled to Javascript when you save them, take a look at:
+When you think you've fixed the problem, run the tests again.
 
-*  [Your IDE e.g. IDEA](http://yeungda.github.com/coffeescript-idea/)
-*  [Emacs coffee-mode](https://github.com/defunkt/coffee-mode) 
-*  [Guard](https://github.com/netzpirat/guard-coffeescript)
+	npm test
 
-Rinse and repeat until all tests turn green.
+When that test passes, enable the next pending test. Rinse and repeat until all tests turn green, simples :-)
 
-For this project I've used [Watchr](https://github.com/mynyml/watchr) - I've provided a koans.watchr file that 
-will automatically compile files as they are saved from the koans/ directory to the lib/koans/ directory. 
+When you're done with AboutShould.coffee, copy another file from the koans/ folder to the completed-koans/ folder and start work on that.
 
-The test runner used is [Jasmine](http://pivotal.github.com/jasmine/) with a customized report viewer.
- 
+I'd suggest trying them in the following order, but it's not prescriptive:
+
+1. AboutShould.coffee
+1. AboutFunctions.coffee
+1. AboutArrays.coffee
+1. AboutMutability.coffee
+1. AboutObjects.coffee
+1. AboutInheritance.coffee
+1. AboutHigherOrderFunctions.coffee
+1. AboutApplyingWhatWeHaveLearnt.coffee
+
+If you want to just test a single test file, you can do it like this:
+
+	mocha --compilers coffee:coffee-script/register -R spec completed-koans/test-file.coffee"
+
+If you want mocha to watch your files for changes and rerun the tests automagically when you save changes to a test file, simply use:
+
+	npm run watch
+
+Have fun, and I hope you enjoy playing with CoffeeScript!
 
 ### Endorse this project 
 To say 'thanks' please endorse this project on [Coderwall](http://coderwall.com) by clicking the button below:
@@ -67,6 +88,7 @@ To say 'thanks' please endorse this project on [Coderwall](http://coderwall.com)
 
 The text below is a human-readable summary of (and not a substitute for) the license, contained in the LICENSE file.
 ---
+![CC BY-NC-SA 4.0](http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 
 You are free to:
