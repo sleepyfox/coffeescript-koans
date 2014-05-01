@@ -87,6 +87,6 @@ To say 'thanks' please endorse this project on [Coderwall](http://coderwall.com)
 
 ##### License
 
-This software is (c) 2011 Nigel Runnels-Moss and licensed under the MIT license (see
-LICENCE for details).  Enjoy!
+This software is (c) 2011 Nigel Runnels-Moss and licensed under a Creative Coomons license (see
+LICENCE file for details). 
 
