@@ -1,27 +1,25 @@
-# CoffeeScript Koans - koans to learn CoffeeScript #
+# CoffeeScript Koans
+The goal of the CoffeeScript koans is to teach you [CoffeeScript](http://coffeescript.org/) programming through actually doing it, in a test-first fashion. 
 
-This work is based on Ben Hall's [Javascript Koans](https://github.com/BenHall/javascript-koans), which in turn are based upon Edgecase's [Ruby koans](http://github.com/edgecase/ruby_koans). 
-The goal of the CoffeeScript koans is to teach you CoffeeScript programming through actually doing it, in a test-first fashion. I'll mercilessly plagiarise the original documentation as follows:
-
-When you first run the Koans, you'll be presented with a runtime error and a stack trace indicating where the error occurred. Your goal is to make the error go away. As you fix each error, you should learn something about the CoffeeScript language and functional programming in general.
+When you first run the Koans, you'll be presented with a run-time error and a stack trace indicating where the error occurred. Your goal is to make the error go away. As you fix each error, you should learn something about the CoffeeScript language and functional programming in general.
 
 Your journey towards CoffeeScript enlightenment starts in the Koans folder with the AboutExpects.coffee file. 
 
 These Koans will be very simple, so don't over-think them! As you progress through more Koans, more and more CoffeeScript syntax will be introduced which will allow you to solve more complicated problems and use more advanced techniques.
 
-### Getting Started
+# Getting Started
 
-This project requires Node.js - if you haven't already installed it I would recommend installing the Node Version Manager (NVM) and using that to install Node - see more here.
+This project requires [Node.js](http://nodejs.org/) - if you haven't already installed it I would recommend installing the Node Version Manager - [NVM](https://github.com/creationix/nvm) - and using that to install Node.
 	
-Install dependencies with npm:
+Install dependencies by using npm from the command line:
 	
 	npm install
 
-### Running the Koans the command line
+# Running the Koans
 
 Start with copying the file koans/AboutShould.coffee to the completed-koans/ folder. 
 
-Run the tests with mocha:
+Run the tests with [Mocha](http://visionmedia.github.io/mocha/) on the command line:
 
 	npm test
 
@@ -61,9 +59,9 @@ I'd suggest trying them in the following order, but it's not prescriptive:
 1. AboutHigherOrderFunctions.coffee
 1. AboutApplyingWhatWeHaveLearnt.coffee
 
-If you want to just test a single test file, you can do it like this:
+If you want to just test a single test file, you can do it like this: (remember to add in the name of your file)
 
-	mocha --compilers coffee:coffee-script/register -R spec completed-koans/test-file.coffee"
+	mocha --compilers coffee:coffee-script/register -R spec completed-koans/FILE-NAME-GOES-HERE.coffee
 
 If you want mocha to watch your files for changes and rerun the tests automagically when you save changes to a test file, simply use:
 
@@ -71,20 +69,20 @@ If you want mocha to watch your files for changes and rerun the tests automagica
 
 Have fun, and I hope you enjoy playing with CoffeeScript!
 
-### Endorse this project 
+# Endorse this project 
 To say 'thanks' please endorse this project on [Coderwall](http://coderwall.com) by clicking the button below:
 
 [![endorse](http://api.coderwall.com/sleepyfox/endorsecount.png)](http://coderwall.com/sleepyfox)
 
-### Inspirations & thanks
+# Inspirations & thanks
 
-*  _David Laing & Greg Malcolm _ - for their Javascript/Jasmine port of the Ruby koans
-*  _Edgecase_ - for the great Ruby Koans
-*  _Jeremy Ashkenas and the Coffeescript crew on GitHub_ - for making CoffeeScript in the first place
-*  _Douglas Crockford_ - for Javascript; the good bits
-*  _Daniel P. Friedman & Matthias Felleisen_ - for 'The Little LISPer' book, where it all started
+* _David Laing & Greg Malcolm _ - for their Javascript/Jasmine port of the Ruby koans
+* _Edgecase_ - for the great Ruby Koans
+* _Jeremy Ashkenas and the Coffeescript crew on GitHub_ - for making CoffeeScript in the first place
+* _Douglas Crockford_ - for Javascript; the good bits
+* _Daniel P. Friedman & Matthias Felleisen_ - for 'The Little LISPer' book, where it all started
 
-##### License (legal deed)
+# License (legal deed)
 
 The text below is a human-readable summary of (and not a substitute for) the license, contained in the LICENSE file.
 ---
