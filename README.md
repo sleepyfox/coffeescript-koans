@@ -87,8 +87,11 @@ Or, if you happen to be in London, please drop by for a chat and buy me a beer!
 # License (legal deed)
 
 The text below is a human-readable summary of (and not a substitute for) the license, contained in the LICENSE file.
----
+
+* * * * *
+
 ![CC BY-NC-SA 4.0](http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)
+
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 
 You are free to:
