@@ -1,5 +1,13 @@
+should = require('chai').should() # import Chai.js matchers
+FILL_ME_IN = 'Fill this value in' # Don't touch this one!
+
+# In this koan, we'll explore the concept of CoffeeScript's
+# Class keyword a little
+# Note: ES6's new 'Class' keyword functions in a very similar way
+# (this is not a coincidence!)
+
 class Muppet
-  constructor: (@age, @hobby) ->
+  constructor: (@age, @hobby) -> # Why is this function empty?
   answerNanny: -> "Everything's cool!"
 
 class SwedishChef extends Muppet
@@ -8,32 +16,31 @@ class SwedishChef extends Muppet
   cook: -> 'Mmmm soup!'
 
 describe 'About inheritance', ->
-  beforeEach ->
-    @muppet = new Muppet 2, 'coding'
-    @swedishChef = new SwedishChef 3, 'cooking', 'chillin'
+  muppet = new Muppet 2, 'coding'
+  swedishChef = new SwedishChef 3, 'cooking', 'chillin'
 
   it 'should be able to call a method on the derived object', ->
-    (expect @swedishChef.cook()).toEqual(FILL_ME_IN)
+    swedishChef.cook().should.equal FILL_ME_IN
 
-  it 'should be able to call a method on the base object', ->
-    (expect @swedishChef.answerNanny()).toEqual(FILL_ME_IN)
+  xit 'should be able to call a method on the base object', ->
+    swedishChef.answerNanny().should.equal FILL_ME_IN
 
-  it 'should set constructor parameters on the base object', ->
-    (expect @swedishChef.age).toEqual(FILL_ME_IN)
-    (expect @swedishChef.hobby).toEqual(FILL_ME_IN)
+  xit 'should set constructor parameters on the base object', ->
+    swedishChef.age.should.equal FILL_ME_IN
+    swedishChef.hobby.should.equal FILL_ME_IN
 
-  it 'should set constructor parameters on the derived object', ->
-    (expect @swedishChef.mood).toEqual(FILL_ME_IN)
+  xit 'should set constructor parameters on the derived object', ->
+    swedishChef.mood.should.equal FILL_ME_IN
 
-  it 'should allow instances to override class methods', ->
+  xit 'should allow instances to override class methods', ->
     gonzo = new Muppet 3, 'daredevil performer'
     gonzo.answerNanny = -> 'Hehehe!'
-    (expect gonzo.answerNanny()).toBe(FILL_ME_IN)
-    (expect @muppet.answerNanny()).toBe(FILL_ME_IN)
+    gonzo.answerNanny().should.equal FILL_ME_IN
+    muppet.answerNanny().should.equal FILL_ME_IN
 
-  it 'should allow derived classes to override base classes', ->
+  xit 'should allow derived classes to override base classes', ->
     class DanishChef extends SwedishChef
       cook: -> 'Sizzle'
     redzepi = new DanishChef 30, 'foraging', 'happy'
-    (expect redzepi.cook()).toBe(FILL_ME_IN)
-    (expect @swedishChef.cook()).toBe(FILL_ME_IN)
+    redzepi.cook().should.equal FILL_ME_IN
+    swedishChef.cook().should.equal FILL_ME_IN
