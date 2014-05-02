@@ -74,12 +74,14 @@ To say 'thanks' please endorse this project on [Coderwall](http://coderwall.com)
 
 [![endorse](http://api.coderwall.com/sleepyfox/endorsecount.png)](http://coderwall.com/sleepyfox)
 
+Or, if you happen to be in London, please drop by for a chat and buy me a beer!
+
 # Inspirations & thanks
 
-* _David Laing & Greg Malcolm _ - for their Javascript/Jasmine port of the Ruby koans
+* _David Laing & Greg Malcolm_ - for their JavaScript/Jasmine port of the Ruby koans
 * _Edgecase_ - for the great Ruby Koans
-* _Jeremy Ashkenas and the Coffeescript crew on GitHub_ - for making CoffeeScript in the first place
-* _Douglas Crockford_ - for Javascript; the good bits
+* _Jeremy Ashkenas and the CoffeeScript crew on GitHub_ - for making CoffeeScript in the first place
+* _Douglas Crockford_ - for JavaScript; the good bits
 * _Daniel P. Friedman & Matthias Felleisen_ - for 'The Little LISPer' book, where it all started
 
 # License (legal deed)
