@@ -5,7 +5,7 @@ describe 'About Functions', ->
   it 'should declare functions', ->
     # In Coffeescript, the value of the last expression evaluated
     # is by default the return value of the function, this enables
-    # us to write very concise function detinitions
+    # us to write very concise function definitions
     add = (a, b) -> a + b
     add(1, 2).should.equal FILL_ME_IN
 
