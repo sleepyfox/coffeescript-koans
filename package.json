@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/sleepyfox/coffeescript-koans",
   "devDependencies": {
-    "coffee-script": "~1.7.1",
-    "mocha": "~1.18.2",
-    "chai": "~1.9.1"
+    "chai": "^2.2.0",
+    "coffee-script": "^1.9.1",
+    "mocha": "^2.2.1"
   }
 }
