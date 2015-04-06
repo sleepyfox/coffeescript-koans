@@ -48,7 +48,7 @@ When that test passes, enable the next pending test. Rinse and repeat until all 
 
 When you're done with AboutShould.coffee, copy another file from the koans/ folder to the completed-koans/ folder and start work on that.
 
-I'd suggest trying them in the following order, but it's not prescriptive:
+I would suggest trying them in the following order, but its' not prescriptive:
 
 1. AboutShould.coffee
 1. AboutFunctions.coffee
@@ -72,7 +72,7 @@ Have fun, and I hope you enjoy playing with CoffeeScript!
 # Endorse this project 
 To say 'thanks' please endorse this project on [Coderwall](http://coderwall.com) by clicking the button below:
 
-[![endorse](http://api.coderwall.com/sleepyfox/endorsecount.png)](http://coderwall.com/sleepyfox)
+[![endorse](https://api.coderwall.com/sleepyfox/endorsecount.png)](https://coderwall.com/sleepyfox)
 
 Or, if you happen to be in London, please drop by for a chat and buy me a beer!
 
