@@ -90,9 +90,9 @@ The text below is a human-readable summary of (and not a substitute for) the lic
 
 * * * * *
 
-![CC BY-NC-SA 4.0](http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)
+![CC BY-SA 4.0](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)
 
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 
 You are free to:
 
@@ -104,7 +104,6 @@ _The licensor cannot revoke these freedoms as long as you follow the license ter
 Under the following terms:
 
 * Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-* NonCommercial — You may not use the material for commercial purposes.
 * ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 * No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
