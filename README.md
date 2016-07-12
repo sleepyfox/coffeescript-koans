@@ -48,7 +48,7 @@ When that test passes, enable the next pending test. Rinse and repeat until all 
 
 When you're done with AboutShould.coffee, copy another file from the koans/ folder to the completed-koans/ folder and start work on that.
 
-I would suggest trying them in the following order, but its' not prescriptive:
+I would suggest trying them in the following order, but it is not prescriptive:
 
 1. AboutShould.coffee
 1. AboutFunctions.coffee

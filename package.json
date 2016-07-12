@@ -1,11 +1,11 @@
 {
   "name": "coffeescript-koans",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Koans for learning CoffeeScript",
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers coffee:coffee-script/register -R spec completed-koans/*.coffee",
-    "watch": "mocha -w --compilers coffee:coffee-script/register -R spec completed-koans/*.coffee"
+    "watch": "mocha -w --compilers coffee:coffee-script/register -R nyan completed-koans/*.coffee"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/sleepyfox/coffeescript-koans",
   "devDependencies": {
-    "chai": "^2.2.0",
-    "coffee-script": "^1.9.1",
-    "mocha": "^2.2.1"
+    "chai": "^3.5",
+    "coffee-script": "^1.10",
+    "mocha": "^2.5"
   }
 }
