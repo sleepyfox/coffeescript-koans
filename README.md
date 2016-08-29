@@ -19,7 +19,7 @@ Install dependencies by using npm from the command line:
 
 Start with copying the file koans/AboutShould.coffee to the completed-koans/ folder. 
 
-Run the tests with [Mocha](http://visionmedia.github.io/mocha/) on the command line:
+Run the tests with [Mocha](http://mochajs.org) on the command line:
 
 	npm test
 
